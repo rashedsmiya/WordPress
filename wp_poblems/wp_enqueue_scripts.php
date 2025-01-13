@@ -12,10 +12,6 @@ function custom_styles() {
 
 add_action('wp_enqueue_scripts', 'custom_styles');
 
-
-
-
-
 function ali_css_js_file_calling() { 
     // Enqueue default stylesheet
     wp_enqueue_style('ali-style', get_stylesheet_uri());
