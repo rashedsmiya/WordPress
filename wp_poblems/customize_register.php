@@ -19,4 +19,4 @@ function the_latest_css($wp_customize){
     ));  
 }
 
-add_action('customize_register', 'the_latest_css');
+add_action('customize_register', 'the_latest_css');     
