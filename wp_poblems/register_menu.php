@@ -1,7 +1,9 @@
 <?php
 
 <div class="col-md-9">
-         <?php wp_nav_menu( array('theme_location' => 'main_menu', 'menu_id' => 'nav') ); ?>
+
+    <?php wp_nav_menu( array('theme_location' => 'main_menu', 'menu_id' => 'nav') ); ?>
+
 </div>
 
 // Menu Register
@@ -13,6 +15,7 @@ register_nav_menu('main_menu', __('Main Menu', 'alihossain'));
 function my_theme_register_menus() {
     register_nav_menu('primary', __('Primary Menu', 'my-text-domain'));
 }
+
 add_action('after_setup_theme', 'my_theme_register_menus');
 
 // Multiple Menu
@@ -22,8 +25,8 @@ function my_theme_register_menus() {
         'footer'    => __('Footer Menu', 'my-text-domain'),
     ));
 }
-add_action('after_setup_theme', 'my_theme_register_menus');
 
+add_action('after_setup_theme', 'my_theme_register_menus');
 
 // Html Css Added
 
@@ -59,4 +62,29 @@ wp_nav_menu(array(
         ));?>
 
     4. Add navwalker(github version) for dropwon support
-?>
+ 
+// Menus 
+register_nav_menus(
+
+    array(
+        'top_menu' => 'Top Menu Location', 
+        'mobile-menu' => 'Mobile Menu Location'
+    );
+
+);
+
+<div>
+
+    <?php 
+    
+        wp_nav_menu(
+            array(
+                'theme_location' => 'top-menu', 
+                 'menu_class' => 'top-bar'
+            )
+        );
+
+    ?>
+
+</div>
+
