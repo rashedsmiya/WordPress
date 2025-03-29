@@ -24,17 +24,4 @@
       */  
        
  
-register_activation_hook(
-     __FILE__,
-     'pluginprefix_function_to_run'
-);
-
-function wp_todo_plugin_register_activation(){
-     var_dump('activation');
-     exit();
-}
-
-register_deactivation_hook(){
-          // __FILE__,
-          // 'wp_todo_plugin_register_deactivation'
-} 
+ 
